@@ -1,0 +1,77 @@
+.marvel-character-detail-container {
+    padding: 24px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .marvel-character-detail-header {
+    margin-bottom: 24px;
+  }
+  
+  .marvel-character-back-button {
+    background-color: #e23636 !important;
+    border-color: #e23636 !important;
+  }
+  
+  .marvel-character-back-button:hover {
+    background-color: #c62828 !important;
+    border-color: #c62828 !important;
+  }
+  
+  .marvel-character-detail-content {
+    display: flex;
+    gap: 32px;
+  }
+  
+  .marvel-character-detail-image {
+    flex: 0 0 300px;
+  }
+  
+  .marvel-character-detail-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .marvel-character-detail-info {
+    flex: 1;
+  }
+  
+  .marvel-character-detail-title {
+    color: #e23636 !important;
+    margin-top: 0 !important;
+  }
+  
+  .marvel-character-detail-description {
+    margin-bottom: 24px;
+  }
+  
+  .marvel-character-detail-stats {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  
+  .marvel-character-detail-loading,
+  .marvel-character-detail-error {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    gap: 24px;
+  }
+  
+  @media (max-width: 768px) {
+    .marvel-character-detail-content {
+      flex-direction: column;
+    }
+  
+    .marvel-character-detail-image {
+      flex: 0 0 auto;
+      max-width: 300px;
+      margin: 0 auto;
+    }
+  }
+  

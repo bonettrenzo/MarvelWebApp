@@ -1,0 +1,82 @@
+.not-found-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #202020; 
+    padding: 20px;
+  }
+  
+  .not-found-content {
+    background-color: white;
+    border-radius: 8px;
+    padding: 40px;
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .not-found-content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background: linear-gradient(90deg, #e23636 0%, #518cca 100%); 
+  }
+  
+  .marvel-title-404 {
+    font-size: 120px !important;
+    font-weight: 900 !important;
+    margin: 0 !important;
+    background: linear-gradient(90deg, #e23636 0%, #518cca 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1 !important;
+  }
+  
+  .not-found-subtitle {
+    margin-top: 20px;
+  }
+  
+  .not-found-message {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #555;
+  }
+  
+  .marvel-button {
+    background-color: #e23636 !important; 
+    border-color: #e23636 !important;
+    margin-top: 20px;
+  }
+  
+  .marvel-button:hover {
+    background-color: #c62828 !important;
+    border-color: #c62828 !important;
+  }
+  
+  .not-found-image {
+    margin-top: 30px;
+  }
+  
+  .hero-image-404 {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  @media (max-width: 576px) {
+    .marvel-title-404 {
+      font-size: 80px !important;
+    }
+  
+    .not-found-content {
+      padding: 20px;
+    }
+  }
+  

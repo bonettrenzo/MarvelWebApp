@@ -1,0 +1,45 @@
+.login-form-container {
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .login-form-header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .marvel-title {
+    color: #e23636 !important; 
+    margin-bottom: 8px !important;
+  }
+  
+  .login-form {
+    margin-top: 24px;
+  }
+  
+  .login-form-button {
+    background-color: #e23636 !important; 
+    border-color: #e23636 !important;
+  }
+  
+  .login-form-button:hover {
+    background-color: #c62828 !important;
+    border-color: #c62828 !important;
+  }
+  
+  .recaptcha-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+  
+  .ant-input-affix-wrapper:focus,
+  .ant-input-affix-wrapper-focused {
+    border-color: #e23636 !important;
+    box-shadow: 0 0 0 2px rgba(226, 54, 54, 0.2) !important;
+  }
+  
+  .ant-form-item-has-error .ant-input-affix-wrapper {
+    border-color: #ff4d4f !important;
+  }
+  
