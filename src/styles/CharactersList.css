@@ -14,6 +14,18 @@
     gap: 16px;
   }
   
+  .marvel-characters-actions {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+  
+  .marvel-logout-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
   .marvel-characters-title {
     color: #e23636 !important;
     margin: 0 !important;

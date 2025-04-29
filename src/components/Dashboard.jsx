@@ -1,13 +1,14 @@
 import { useState, useEffect } from "react"
-import { Table, Input, Typography, Spin, message } from "antd"
-import { SearchOutlined } from "@ant-design/icons"
-import { Link } from "react-router-dom"
+import { Table, Input, Typography, Spin, message, Button } from "antd"
+import { SearchOutlined, LogoutOutlined } from "@ant-design/icons"
+import { Link, useNavigate } from "react-router-dom"
 import "../styles/CharactersList.css"
 import { fetchMarvelCharacters } from "../service/marvel.service"
 
 const { Title } = Typography
 
 const Dashboard = () => {
+  const navigate = useNavigate()
   const [characters, setCharacters] = useState([])
   const [loading, setLoading] = useState(true)
   const [searchText, setSearchText] = useState("")
@@ -16,6 +17,12 @@ const Dashboard = () => {
     pageSize: 10,
     total: 0,
   })
+
+  const handleLogout = () => {
+    localStorage.removeItem('token')
+    message.success('Sesión cerrada exitosamente')
+    navigate('/login')
+  }
 
   const loadCharacters = async (page = 1, nameStartsWith = "") => {
     setLoading(true)
@@ -106,13 +113,24 @@ const Dashboard = () => {
         <Title level={2} className="marvel-characters-title">
           Personajes de Marvel
         </Title>
-        <Input
-          placeholder="Buscar personaje"
-          prefix={<SearchOutlined />}
-          onChange={(e) => handleSearch(e.target.value)}
-          className="marvel-characters-search-input"
-          allowClear
-        />
+        <div className="marvel-characters-actions">
+          <Input
+            placeholder="Buscar personaje"
+            prefix={<SearchOutlined />}
+            onChange={(e) => handleSearch(e.target.value)}
+            className="marvel-characters-search-input"
+            allowClear
+          />
+          <Button 
+            type="primary" 
+            danger 
+            icon={<LogoutOutlined />} 
+            onClick={handleLogout}
+            className="marvel-logout-button"
+          >
+            Cerrar Sesión
+          </Button>
+        </div>
       </div>
 
       <Spin spinning={loading} tip="Cargando personajes...">
