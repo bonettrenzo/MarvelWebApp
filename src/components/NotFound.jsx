@@ -1,7 +1,7 @@
 import { Result, Button, Typography } from "antd"
 import { HomeOutlined } from "@ant-design/icons"
 import { Link } from "react-router-dom"
-import "../styles/NotFound.css"
+import "../styles/notFound.css"
 
 const { Title, Paragraph } = Typography
 
