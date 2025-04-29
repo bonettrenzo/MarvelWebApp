@@ -1,9 +1,10 @@
 import md5 from "md5"
+import mockCharacter from "../const/mockdata"
 
 // Estas claves deberían estar en variables de entorno
 const API_PUBLIC_KEY = "7d58e4198bd0273158ebba71f5bebb18"
 const API_PRIVATE_KEY = "fa6757bc02a1b511780820f3aed93afb02e33c2a"
-const API_BASE_URL = "https://gateway.marvel.com/v1/public"
+const API_BASE_URL = "https://gateway.marvel.com:443/v1/public"
 
 const getAuthParams = () => {
   const timestamp = new Date().getTime().toString()
@@ -30,7 +31,8 @@ export const fetchMarvelCharacters = async (offset = 0, limit = 20, nameStartsWi
   const response = await fetch(url)
 
   if (!response.ok) {
-    throw new Error(`Error: ${response.status}`)
+    console.error(`Error: ${response.status}`) 
+    return mockCharacter
   }
 
   return response.json()
@@ -45,7 +47,8 @@ export const fetchMarvelCharacter = async (characterId) => {
   const response = await fetch(url)
 
   if (!response.ok) {
-    throw new Error(`Error: ${response.status}`)
+    console.error(`Error: ${response.status}`) 
+    return mockCharacter
   }
 
   return response.json()

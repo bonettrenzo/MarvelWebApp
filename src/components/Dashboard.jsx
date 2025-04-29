@@ -22,8 +22,13 @@ const Dashboard = () => {
     try {
       const offset = (page - 1) * pagination.pageSize
       const response = await fetchMarvelCharacters(offset, pagination.pageSize, nameStartsWith)
-
-      setCharacters(response.data.results)
+      
+      if(nameStartsWith){
+        setCharacters(response.data.results.filter(character => character.name.toLowerCase().includes(nameStartsWith.toLowerCase())))
+      }else{
+        setCharacters(response.data.results)
+      }
+      
       setPagination({
         ...pagination,
         current: page,
@@ -59,7 +64,7 @@ const Dashboard = () => {
       width: 100,
       render: (thumbnail) => (
         <img
-          src={`${thumbnail.path}/standard_medium.${thumbnail.extension}`}
+          src={`${thumbnail.path}`}
           alt="Character"
           className="marvel-character-thumbnail"
         />

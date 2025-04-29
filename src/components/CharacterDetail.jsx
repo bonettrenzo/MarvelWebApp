@@ -18,7 +18,7 @@ const CharacterDetail = () => {
       setLoading(true)
       try {
         const response = await fetchMarvelCharacter(id)
-        setCharacter(response.data.results[0])
+        setCharacter(response.data.results.find((character) => character.id == id))
       } catch (error) {
         console.error("Error fetching character:", error)
       } finally {
@@ -41,7 +41,7 @@ const CharacterDetail = () => {
     return (
       <div className="marvel-character-detail-error">
         <Empty description="No se pudo encontrar el personaje" image={Empty.PRESENTED_IMAGE_SIMPLE} />
-        <Link to="/characters">
+        <Link to="/">
           <Button type="primary" icon={<ArrowLeftOutlined />}>
             Volver a la lista
           </Button>
@@ -50,12 +50,13 @@ const CharacterDetail = () => {
     )
   }
 
-  const imageUrl = `${character.thumbnail.path}/portrait_uncanny.${character.thumbnail.extension}`
+  const imageUrl = `${character.thumbnail.path}`
+
 
   return (
     <div className="marvel-character-detail-container">
       <div className="marvel-character-detail-header">
-        <Link to="/characters">
+        <Link to="/">
           <Button type="primary" icon={<ArrowLeftOutlined />} className="marvel-character-back-button">
             Volver a la lista
           </Button>
@@ -64,7 +65,7 @@ const CharacterDetail = () => {
 
       <div className="marvel-character-detail-content">
         <div className="marvel-character-detail-image">
-          <img src={imageUrl || "/placeholder.svg"} alt={character.name} />
+          <img src={imageUrl} alt={character.name} />
         </div>
 
         <div className="marvel-character-detail-info">

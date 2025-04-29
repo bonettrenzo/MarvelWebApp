@@ -5,6 +5,7 @@ import Dashboard from "./components/Dashboard.jsx"
 import ProtectedRoute from "./components/ProtectedRoute.jsx"
 import "./App.css"
 import NotFound from "./components/NotFound.jsx"
+import CharacterDetail from "./components/CharacterDetail.jsx"
 
 const { Content } = Layout
 
@@ -29,6 +30,11 @@ function App() {
         <Route path="/" element={
           <ProtectedRoute>
             <Dashboard />
+          </ProtectedRoute>
+        } />
+        <Route path="/character/:id" element={
+          <ProtectedRoute>
+            <CharacterDetail />
           </ProtectedRoute>
         } />
         <Route path="/" element={<Navigate to="/login" replace />} />
