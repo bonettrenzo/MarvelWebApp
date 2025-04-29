@@ -109,7 +109,7 @@ const LoginForm = () => {
         <Form.Item>
           <div className="recaptcha-container">
             <ReCAPTCHA
-              sitekey="6LeXhSgrAAAAACIodK-n_K6ECSKLlxWh0ayCGRJj" 
+              sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" 
               onChange={handleRecaptchaChange}
               theme="light"
             />
