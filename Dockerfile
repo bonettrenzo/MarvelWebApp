@@ -9,7 +9,7 @@ COPY vite.config.* ./
 COPY . .
 
 # Instalamos dependencias y construimos la app
-RUN npm install
+RUN npm install --force
 RUN npm run build
 
 # Etapa 2: Servidor web
