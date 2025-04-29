@@ -53,6 +53,14 @@ En la raíz del proyecto puedes ejecutar:
 
 ---
 
+## 🛠️ Notas adicionales
+
+- El proyecto está configurado para ser desplegado en **Render**. Asegúrate de configurar las variables de entorno correctamente en la plataforma.
+- Utiliza **Docker** para la construcción y despliegue del contenedor en un entorno controlado.
+  - Asegúrate de que el archivo `Dockerfile` esté configurado correctamente y que se utilicen las mejores prácticas para el despliegue.
+
+
+
 ## 🌐 Comentarios sobre la API de Marvel
 
 ```js
