@@ -1,4 +1,4 @@
-# 🧪 Prueba Técnica - Broers
+# 🧪 Marvel Web App
 
 ![Demo](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExcHZsODFuMWJxbjJ3bHcwZW9taHZ1dHJrOGM0dWZ5YjM1OG1vNWxoYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/vBjLa5DQwwxbi/giphy.gif)
 
