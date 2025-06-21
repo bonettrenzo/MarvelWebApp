@@ -50,7 +50,7 @@ const CharacterDetail = () => {
     )
   }
 
-  const imageUrl = `${character.thumbnail.path}`
+  const imageUrl = `${character.thumbnail.path/standard_medium.${character.thumbnail.extension}}`
 
 
   return (
