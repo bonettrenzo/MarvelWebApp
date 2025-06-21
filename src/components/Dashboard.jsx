@@ -64,14 +64,14 @@ const Dashboard = () => {
   }
 
   const columns = [
-    {
+   {
       title: "Imagen",
       dataIndex: "thumbnail",
       key: "thumbnail",
       width: 100,
       render: (thumbnail) => (
         <img
-          src={`${thumbnail.path}`}
+          src={`${thumbnail.path}/standard_medium.${thumbnail.extension}`}
           alt="Character"
           className="marvel-character-thumbnail"
         />
